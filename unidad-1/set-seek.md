@@ -33,18 +33,23 @@ En este sistemas físico interactivo identifica los inputs, outputs y el proceso
 #### Inputs
 
 . Botones del microbit
+
 . Codigo que cargamos al microbit
+
 . Mouse y teclado
+
 . Cable USB
 
 #### outputs
 
 . Cambio de color en la pantalla
+
 . Cara feliz en el microbit
 
 #### procesos
 
-. El computador compila y transfiere el código al Micro:bit.
+. El computador compila y transfiere el código al Micro:bit
+
 . El Micro:bit interpreta y ejecuta el código
 
 
