@@ -5,8 +5,10 @@
 ### Actividad 07
 
 las caracteristicas de un sistema fisico interactivo segun yo serian: 
+
 . existe la interaccion entre maquina y usuario
-. no se cuales son las otras dos person
+
+. no se cuales son las otras dos perdón
 
 El input en mi actividad eran los botones de el micro:bit y pues, considero que el codigo que escribi tambien se puede considerar una entrada, el procces vendria siendo la decodificacion de la información por medio del puerto serial, por ultimo el output es la pantalla del computador, pues muestra como el circulo se mueve
 
