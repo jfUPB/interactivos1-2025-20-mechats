@@ -58,7 +58,8 @@ En este sistemas físico interactivo identifica los inputs, outputs y el proceso
  https://editor.p5js.org/ <img width="1907" height="922" alt="Captura de pantalla 2025-07-23 131059" src="https://github.com/user-attachments/assets/734a5da3-fece-4fc3-b0e5-1421c18efc05" />
 
 
- ```function setup() {
+``` js
+function setup() {
   createCanvas(600, 400);
   background(220);
 }
@@ -79,9 +80,7 @@ function draw() {
     triangle(x, y, x + size, y, x + size / 2, y - size);
   }
 }
-     ```
-
-
+```
 
 
 <img width="1907" height="922" alt="sistemas" src="https://github.com/user-attachments/assets/9587c415-c8cf-4f0d-9a98-0d6268a30b5e" />
