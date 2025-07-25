@@ -7,9 +7,9 @@ En esta actividad pudimos ver que mediante una conexion serial y  la pulsacion d
 
 ### Actividad 06
 
-https://editor.p5js.org/mechats/sketches/9AV_dcjYL
+[Código p5.js](https://editor.p5js.org/mechats/sketches/9AV_dcjYL)
 
-```
+``` js
 let port;
 let x = 200;
 
@@ -45,7 +45,8 @@ function serialEvent() {
 }
 ```
 
-```from microbit import *
+``` py
+from microbit import *
 
 uart.init(baudrate=115200)
 
