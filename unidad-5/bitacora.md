@@ -309,6 +309,30 @@ El hallazgo principal es que el framing soluciona el problema de sincronización
 
 ### Axtividad 04
 
+1. Lo primero que vamos a hacer es ejecutar nuestro codigo en p5.js tal cual, lo unico que tiene diferente  es el codigo del micro:bit, vaoms a ver que sucede
+
+
+ <img width="1917" height="854" alt="image" src="https://github.com/user-attachments/assets/96b3083e-78ae-4137-bd63-bd6a6293bcff" />
+
+ No muestra nada, nisiquiera la consola muestra los datos que le llegan, lo unico raro es que aparecen unas lineas punteadas. Pero probablemente solo significa el intento que hace el codigo por leer los datos que el micro:bit envia
+
+
+ 2. en vez de usar readUntil("\n"), vamos a leer bytes crudos con readBytes(). Imprimimos en consola los bytes en hexadecimal para inspeccionar.
+
+    <img width="1916" height="854" alt="image" src="https://github.com/user-attachments/assets/daf33a8f-4402-444f-8671-e931f5f2cd2d" />
+
+    Ahora podemos ver que datos binarios llegan del microbit
+
+3. ahora implementaremos el buffer y framing
+
+   
+
+
+ 
+
+
+
+
 
 
 
@@ -321,6 +345,7 @@ El hallazgo principal es que el framing soluciona el problema de sincronización
 
 
  
+
 
 
 
