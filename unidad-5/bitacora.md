@@ -325,15 +325,115 @@ El hallazgo principal es que el framing soluciona el problema de sincronización
 
 3. ahora implementaremos el buffer y framing
 
+```javascript
+let serialBuffer = [];
+
+function readSerialData() {
+  let available = port.availableBytes();
+  if (available > 0) {
+    let newData = port.readBytes(available);
+    serialBuffer = serialBuffer.concat(newData);
+  }
+
+  while (serialBuffer.length >= 8) {
+    if (serialBuffer[0] !== 0xaa) {
+      serialBuffer.shift(); // descartar hasta header
+      continue;
+    }
+
+    if (serialBuffer.length < 8) break;
+
+    let packet = serialBuffer.slice(0, 8);
+    serialBuffer.splice(0, 8);
+
+    let dataBytes = packet.slice(1, 7);
+    let receivedChecksum = packet[7];
+    let computedChecksum = dataBytes.reduce((a, b) => a + b, 0) % 256;
+
+    if (computedChecksum !== receivedChecksum) {
+      console.log("Checksum error");
+      continue;
+    }
+
+    let buffer = new Uint8Array(dataBytes).buffer;
+    let view = new DataView(buffer);
+    microBitX = view.getInt16(0);
+    microBitY = view.getInt16(2);
+    microBitAState = view.getUint8(4) === 1;
+    microBitBState = view.getUint8(5) === 1;
+
+    console.log("OK packet", microBitX, microBitY, microBitAState, microBitBState);
+  }
+}
+```
 
 
 
 
 
 
-4.   
+
+
+
+
+
+5.   Ya con datos binarios validados, reemplazamos la parte donde usaba readUntil("\n") para alimentar las variables
+
+   ```javascript
+function draw() {
+  background(255);
+
+  if (!port.opened()) {
+    connectBtn.html("Connect to micro:bit");
+    microBitConnected = false;
+  } else {
+    microBitConnected = true;
+    connectBtn.html("Disconnect");
+
+    if (port.opened() && !connectionInitialized) {
+      port.clear();
+      connectionInitialized = true;
+    }
+
+   
+    readSerialData();
+  }
+
+ 
+  switch (appState) {
+    case STATES.WAIT_MICROBIT_CONNECTION:
+      if (microBitConnected) appState = STATES.RUNNING;
+      break;
+
+    case STATES.RUNNING:
+      if (!microBitConnected) {
+        appState = STATES.WAIT_MICROBIT_CONNECTION;
+      }
+
+      if (microBitAState) {
+        if (!newShape) {
+          newShape = new Shape(microBitX, microBitY, microBitX + 10, microBitY + 10, shapeHeight, shapeColor);
+        } else {
+          newShape.x2 = microBitX;
+          newShape.y2 = microBitY;
+          newShape.h = shapeHeight;
+          newShape.c = shapeColor;
+          newShape.draw();
+        }
+      }
+
+      shapes.forEach(s => s.draw());
+      if (newShape && microBitAState) newShape.draw();
+      break;
+  }
+}
+```
+
 
 <img width="1917" height="968" alt="image" src="https://github.com/user-attachments/assets/4f5e5865-5c14-4e45-8203-493817605f52" />
+
+
+Y ahora nuestro codigo funciona corretamente recibiendo datos binarios por el puerto serial :))
 
 
    
@@ -356,6 +456,7 @@ El hallazgo principal es que el framing soluciona el problema de sincronización
 
 
  
+
 
 
 
