@@ -325,6 +325,17 @@ El hallazgo principal es que el framing soluciona el problema de sincronización
 
 3. ahora implementaremos el buffer y framing
 
+
+
+
+
+
+
+4.   
+
+<img width="1917" height="968" alt="image" src="https://github.com/user-attachments/assets/4f5e5865-5c14-4e45-8203-493817605f52" />
+
+
    
 
 
@@ -345,6 +356,7 @@ El hallazgo principal es que el framing soluciona el problema de sincronización
 
 
  
+
 
 
 
