@@ -70,7 +70,7 @@ Ahora cambiamos el codigo
 
 <img width="950" height="235" alt="image" src="https://github.com/user-attachments/assets/5ecd3a2f-0fd6-4d6d-bbaf-fab48021a918" />
 
-ada vez que agitaba el microbit veia que en el monitor hex aparecian exactamente 6 bytes por mensaje, esto se relaciona directo con el formato '>2h2B' porque 2h son dos enteros cortos de 2 bytes cada uno (total 4 bytes) y 2B son dos enteros sin signo de 1 byte cada uno (total 2 bytes), en total 6 bytes; cada byte representa una parte del dato: los primeros dos bytes son el valor de x, los siguientes dos bytes son el valor de y, el quinto byte es el estado del boton a y el sexto el del boton b
+cada vez que agitaba el microbit veia que en el monitor hex aparecian exactamente 6 bytes por mensaje, esto se relaciona directo con el formato '>2h2B' porque 2h son dos enteros cortos de 2 bytes cada uno (total 4 bytes) y 2B son dos enteros sin signo de 1 byte cada uno (total 2 bytes), en total 6 bytes; cada byte representa una parte del dato: los primeros dos bytes son el valor de x, los siguientes dos bytes son el valor de y, el quinto byte es el estado del boton a y el sexto el del boton b
 
 sobre los numeros positivos y negativos en xValue e yValue, como se usan enteros cortos con signo (h) se representan en complemento a dos, entonces si mando por ejemplo un valor positivo como 1000 en hex se veria como 03 E8 (dependiendo del endianess), pero si mando un valor negativo como -1000 se veria como FC 18, o sea una representacion binaria donde el bit mas significativo indica que es negativo
 
@@ -128,7 +128,7 @@ en este experimento se confirmo que el microbit envia ahora 7 bytes por mensaje,
 
 ### Actividad 03
 
-n la unidad anterior era necesario enviar los datos delimitados y marcados con un salto de línea porque el tamaño de cada mensaje podía variar. Como los datos se transmitían en formato texto (ASCII), cada número podía tener diferente cantidad de dígitos dependiendo de su valor (por ejemplo, el número 9 ocupa un solo carácter mientras que 500 ocupa tres caracteres). Eso significaba que no había una forma fija de saber dónde terminaba un valor y empezaba el siguiente. Para resolverlo, se usaban delimitadores (como comas o espacios) y un salto de línea para indicar el final del paquete, de modo que el receptor pudiera separar los valores de forma correcta.
+en la unidad anterior era necesario enviar los datos delimitados y marcados con un salto de línea porque el tamaño de cada mensaje podía variar. Como los datos se transmitían en formato texto (ASCII), cada número podía tener diferente cantidad de dígitos dependiendo de su valor (por ejemplo, el número 9 ocupa un solo carácter mientras que 500 ocupa tres caracteres). Eso significaba que no había una forma fija de saber dónde terminaba un valor y empezaba el siguiente. Para resolverlo, se usaban delimitadores (como comas o espacios) y un salto de línea para indicar el final del paquete, de modo que el receptor pudiera separar los valores de forma correcta.
 
 En cambio, en esta nueva unidad los datos se envían en formato binario con un tamaño fijo por paquete. Aquí sabemos exactamente que el mensaje siempre ocupa 6 bytes (2 para xValue, 2 para yValue, 1 para aState y 1 para bState). Como cada dato ocupa siempre la misma cantidad de espacio, el receptor puede leer directamente los bloques de bytes sin necesidad de un delimitador ni un salto de línea
 
@@ -307,7 +307,7 @@ El hallazgo principal es que el framing soluciona el problema de sincronización
 <img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/2db178d1-61bd-4dbd-bd21-1bbeea0edd28" />
 
 
-### Axtividad 04
+### Actividad 04
 
 1. Lo primero que vamos a hacer es ejecutar nuestro codigo en p5.js tal cual, lo unico que tiene diferente  es el codigo del micro:bit, vaoms a ver que sucede
 
@@ -511,6 +511,7 @@ Me situo en logrado, (4.1) comprendi las ventajas que tiene el formato binario s
 
 
  
+
 
 
 
