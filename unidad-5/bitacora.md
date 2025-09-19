@@ -132,7 +132,7 @@ n la unidad anterior era necesario enviar los datos delimitados y marcados con u
 
 En cambio, en esta nueva unidad los datos se envían en formato binario con un tamaño fijo por paquete. Aquí sabemos exactamente que el mensaje siempre ocupa 6 bytes (2 para xValue, 2 para yValue, 1 para aState y 1 para bState). Como cada dato ocupa siempre la misma cantidad de espacio, el receptor puede leer directamente los bloques de bytes sin necesidad de un delimitador ni un salto de línea
 
-### ¿que pasaria si cambiamos el orden de los bytes en el paquete (little endian en vez de big endian), el receptor seguiria interpretando bien los datos o se dañaria toda la lectura?
+### ¿que pasaria si cambiamos el orden de los bytes en el paquete, el receptor seguiria interpretando bien los datos o se dañaria toda la lectura?
 
 #### Hipotesis
 
@@ -436,6 +436,61 @@ function draw() {
 Y ahora nuestro codigo funciona corretamente recibiendo datos binarios por el puerto serial :))
 
 
+
+### Autoevaluacion
+
+
+nota prupuesta: 4.3
+
+
+
+considero que merezco la nota que obtengo porque durante la actividad realice experimentos variados que me permitieron entender a fondo el funcionamiento del protocolo binario y su interpretacion en el microbit ademas formule hipotesis claras y las puse a prueba con cambios en el codigo analizando los resultados de los bytes y su significado tambien explore errores y diferentes formatos de empaquetado para ver como afectaban la lectura de datos y documente todo el proceso de manera detallada
+
+
+Profundidad de indagación
+
+Me situo en logrado (4.0) siento que las preguntas que realice me permitieron entender mucho mejor como funciona el protocolo binario. Ademas estas fueron generadas mediante la actividad realizada, demostrando un interes de indagacion por el tema
+
+ejemplo:
+
+<img width="1099" height="713" alt="image" src="https://github.com/user-attachments/assets/f4a08e59-371a-411c-9155-e1d720fc68ba" />
+
+
+Calidad de experimentacion
+
+Me situo en excelente (4.5) , realice experimentos para confirmar hipotesis como por ejemplo ¿que pasaria si se cambia el orden de los bytes? ademas de esto tambien hice experimentos a partir de errores que descubria en la propia experimentacion (como si fuese un experimento a base del experimento que realice)
+
+<img width="1105" height="703" alt="image" src="https://github.com/user-attachments/assets/815e0ad9-4888-4892-99d5-fc2675080e09" />
+
+
+<img width="980" height="723" alt="image" src="https://github.com/user-attachments/assets/054bbecd-fa65-46a8-82c1-da8633347c1f" />
+
+
+Analisis y reflexion
+
+Me situo en logrado, (4.4) despues de cada experimentacion o concepto analizaba que significaban los bytes que llegaban del microbit y como se podian interpretar (si se estaba presionando un boton o no, etc)
+
+
+<img width="936" height="383" alt="image" src="https://github.com/user-attachments/assets/8e7dda87-f0a6-4f81-be7f-b010cca9a32e" />
+
+
+Apropiacion y articulacion de conceptos
+
+Me situo en logrado, (4.1) comprendi las ventajas que tiene el formato binario sobre el ASCII, tanto en rapidez para enviar informacion como la capacidad de enviar mas datos. Siento que tambien logre implementarlo en la aplicacion p5.js, talvez no del todo en la actividad numero 7, pero en mis otros experimentos usaba la aplicacion con formato binario y comprendia ciertos conceptos.
+
+
+<img width="1344" height="539" alt="image" src="https://github.com/user-attachments/assets/28630f5c-1a06-480b-9329-d90249ed130a" />
+
+
+
+
+
+
+
+
+
+
+
    
 
 
@@ -456,6 +511,7 @@ Y ahora nuestro codigo funciona corretamente recibiendo datos binarios por el pu
 
 
  
+
 
 
 
