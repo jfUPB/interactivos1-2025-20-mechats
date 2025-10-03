@@ -275,11 +275,33 @@ No muestra nada la consola, me imagino que porque comentamos el codigo de page2 
 Ademas de añadirle el cambio del fondo le puse que el tamaño de los circulos cambiara según que tan lejos se encontraban uno del otro, aunque no lo pude hacer del todo bien porque no se porque no me aparece el otro circulo cuando paso uno por encima del otro
 
 
-### Actividad 05
+## Autoevaluacion
 
-### idea de mi aplicacion
+nota propuesta: 3.0
 
-estaba pensando en hacer una especie de hunddir el barco pero mas sencillo, como que una pagina sea un radar y esta trate de detectar a la otra ventana, y pues si lo logra que salga algo que avise que encontro a la otra pagina 
+por diferentes motivos no logre realizar mi propia aplicación y no pude completar la fase mas importante de la unidad, sin embargo considero que el desarrollo de las otras actividades junto con sus experimentos es bastante bueno, pues como se puede ver comprendi el funcionamiento del puerto serial y por que al cambiar del puerto 3000 al 3001 no se logra ejecutar la app, pues se esta esperando el envio de datos por un puerto diferente
+
+<img width="1233" height="753" alt="image" src="https://github.com/user-attachments/assets/0d12fcf6-a813-4399-9b6d-b9e27c5bc9f2" />
+
+
+Ademas de esto, formule hipotesis muy validas del por que cada pagina nueva genera una ID unica desde el momento de conexion hasta el momento de desconexion 
+
+
+<img width="1319" height="431" alt="image" src="https://github.com/user-attachments/assets/666892db-62e2-4f2c-b07c-f9321cf71028" />
+
+
+Entendi correctamente los conceptos y para que sirven los protocolos, las rutas y los dominios 
+
+
+<img width="1262" height="352" alt="image" src="https://github.com/user-attachments/assets/c6ee8d9d-7551-4886-8a8f-f8da1e2f4354" />
+
+
+Por ultimo, considero que mi comparación de envio de datos entre https y bytes es bastante bueno y demuestra un entendimiento de ambos temas
+
+<img width="1311" height="366" alt="image" src="https://github.com/user-attachments/assets/bcc8e98c-bde5-445b-b532-65fb41339b06" />
+
+
+
 
 
 
