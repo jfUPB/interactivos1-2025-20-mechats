@@ -74,6 +74,7 @@ Esta información es muy útil para depurar errores, entender el flujo de comuni
 
 ## ACTIVIDAD 4
 ### DIAGRAMA DE FLUJO
+<img width="912" height="711" alt="image" src="https://github.com/user-attachments/assets/77f37035-e051-4127-877f-eb2d32030126" />
 
 
 ## APPLY
@@ -88,5 +89,6 @@ tambien comprendi el funcionamiento de npm install y npm start identificando que
 en cuanto a la comunicacion en tiempo real entendi el papel de socket io y como los eventos emitidos desde un dispositivo pueden ser recibidos y retransmitidos por el servidor usando socketbroadcastemit para que lleguen a los demas clientes sin duplicar el mensaje en el emisor pude observar y analizar los mensajes en consola para verificar la conexion y la interaccion entre el celular y el computador identificando que habia una pequeña latencia pero que la logica funcionaba correctamente
 
 nota propuesta: 3.5
+
 
 
